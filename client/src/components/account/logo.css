@@ -1,0 +1,51 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* ICON */
+.logo-icon {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Glow effect */
+.logo-bg {
+    fill: #1976D2;
+    transition: 0.3s ease;
+}
+
+.logo-pen {
+    fill: white;
+}
+
+.logo-pen-line {
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+/* TEXT */
+.logo-text h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+}
+
+/* 🚀 HOVER EFFECT */
+.logo-container:hover .logo-icon {
+    transform: translateY(-5px) scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(25, 118, 210, 0.8));
+}
+
+/* Glow pulse */
+.logo-container:hover .logo-bg {
+    fill: #1e88e5;
+}

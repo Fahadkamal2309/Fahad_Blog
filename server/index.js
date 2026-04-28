@@ -14,14 +14,13 @@ dotenv.config();
 
 const app = express();
 
-// ✅ FIXED CORS
+// ✅ FIXED CORS (ONLY THIS ONE)
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
 
-app.use(cors());
 app.use('/file', express.static('uploads'));
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));

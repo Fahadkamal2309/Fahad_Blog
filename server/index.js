@@ -3,6 +3,8 @@ dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 import express from 'express';
 import dotenv from 'dotenv';
+console.log("MONGO_URL:", process.env.MONGO_URL ? "OK" : "MISSING");
+console.log("JWT_SECRET:", process.env.JWT_SECRET ? "OK" : "MISSING");
 import cors from 'cors';
 import bodyParser from 'body-parser';
 

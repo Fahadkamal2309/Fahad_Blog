@@ -17,10 +17,11 @@ dotenv.config();
 const app = express();
 
 // ✅ FIXED CORS (ONLY THIS ONE)
+
+
 app.use(cors({
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
+  origin: '*',
+  credentials: true
 }));
 
 app.use('/file', express.static('uploads'));

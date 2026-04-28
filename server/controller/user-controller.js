@@ -62,12 +62,11 @@ const LoginUser = async (req, res) => {
         });
 
     } catch (error) {
-        console.log(" LOGIN ERROR:", error);
-
-        return res.status(500).json({
-            message: "Error logging in"
-        });
-    }
+    console.log("LOGIN ERROR:", error);  // 👈 ADD THIS
+    return res.status(500).json({
+        message: error.message
+    });
+}
 };
 const SignupUser = async (req, res) => {
    
